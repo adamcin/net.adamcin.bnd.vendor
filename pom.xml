@@ -1,0 +1,103 @@
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements. See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership. The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License. You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied. See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>9</version>
+    </parent>
+
+    <groupId>net.adamcin.bnd</groupId>
+    <artifactId>net.adamcin.bnd.vendor</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>Bnd Vendor Plugin</name>
+    <description>
+        Implements a Bnd plugin to override the service.vendor service property for
+        all service-component elements based on the Bundle-Vendor instruction.
+    </description>
+    <inceptionYear>2018</inceptionYear>
+    <url>http://adamcin.net/${project.artifactId}</url>
+
+    <scm>
+        <url>https://github.com/adamcin/${project.artifactId}</url>
+        <developerConnection>scm:git:git@github.com:adamcin/${project.artifactId}.git</developerConnection>
+        <connection>scm:git://github.com/adamcin/${project.artifactId}.git</connection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <properties>
+        <encoding>UTF-8</encoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <developers>
+        <developer>
+            <id>madamcin</id>
+            <name>Mark Adamcin</name>
+            <email>adamcin@gmail.com</email>
+            <url>http://adamcin.net</url>
+            <organization>Infield Digital</organization>
+            <organizationUrl>https://www.infielddigital.com</organizationUrl>
+            <roles>
+                <role>architect</role>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <!-- bndlib is provided at runtime (it neither needs to be considered by the maven-shade-plugin nor as transitive dependency by Maven) -->
+        <dependency>
+            <groupId>biz.aQute.bnd</groupId>
+            <artifactId>bndlib</artifactId>
+            <version>2.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+</project>
