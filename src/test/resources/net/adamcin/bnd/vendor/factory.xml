@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0">
+    <scr:component name="net.adamcin.bnd.vendor.factory.impl.AppleComponent" factory="net.adamcin.bnd.vendor.factory.Component/apple">
+        <implementation class="net.adamcin.bnd.vendor.factory.impl.AppleComponent"/>
+        <property name="service.pid" value="net.adamcin.bnd.vendor.factory.impl.AppleComponent"/>
+        <reference name="componentService" interface="net.adamcin.bnd.vendor.services.ComponentService" cardinality="1..1" policy="static" bind="bindComponentService" unbind="unbindComponentService"/>
+    </scr:component>
+</components>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="net.adamcin.bnd.vendor.servlets.Servlet">
+    <implementation class="net.adamcin.bnd.vendor.servlets.Servlet"/>
+    <service>
+        <provide interface="javax.servlet.Servlet"/>
+    </service>
+    <property name="sling.servlet.extensions" type="String" value="json"/>
+    <property name="sling.servlet.resourceTypes" type="String" value="adamcin/components/search"/>
+    <property name="sling.servlet.methods" type="String" value="GET"/>
+    <property name="sling.servlet.selectors" type="String" value="search"/>
+</scr:component>
