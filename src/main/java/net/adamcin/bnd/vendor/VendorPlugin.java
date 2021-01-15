@@ -84,7 +84,9 @@ public class VendorPlugin implements AnalyzerPlugin, Plugin {
 			Map<String, ? extends Map<String, String>> map = Processor.parseHeader(bpHeader, null);
 			for (String root : map.keySet()) {
 				Resource resource = analyzer.getJar().getResource(root);
-				process(analyzer, transformer, root, resource);
+				if (resource != null) {
+					process(analyzer, transformer, root, resource);
+				}
 			}
 		}
 
