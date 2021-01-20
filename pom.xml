@@ -31,12 +31,12 @@
         all service-component elements based on the Bundle-Vendor instruction.
     </description>
     <inceptionYear>2018</inceptionYear>
-    <url>http://adamcin.net/${project.artifactId}</url>
+    <url>http://adamcin.net/net.adamcin.bnd.vendor</url>
 
     <scm>
-        <url>https://github.com/adamcin/${project.artifactId}</url>
-        <developerConnection>scm:git:git@github.com:adamcin/${project.artifactId}.git</developerConnection>
-        <connection>scm:git://github.com/adamcin/${project.artifactId}.git</connection>
+        <url>https://github.com/adamcin/net.adamcin.bnd.vendor</url>
+        <developerConnection>scm:git:git@github.com:adamcin/net.adamcin.bnd.vendor.git</developerConnection>
+        <connection>scm:git://github.com/adamcin/net.adamcin.bnd.vendor.git</connection>
         <tag>HEAD</tag>
     </scm>
 
@@ -47,7 +47,7 @@
         </snapshotRepository>
         <site>
             <id>site</id>
-            <url>scm:git:git@github.com:adamcin/oakpal.git</url>
+            <url>scm:git:git@github.com:adamcin/net.adamcin.bnd.vendor.git</url>
         </site>
     </distributionManagement>
 
@@ -124,6 +124,14 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.7.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <source>8</source>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
