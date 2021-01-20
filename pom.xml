@@ -22,7 +22,7 @@
 
     <groupId>net.adamcin.bnd</groupId>
     <artifactId>net.adamcin.bnd.vendor</artifactId>
-    <version>0.3.0-SNAPSHOT</version>
+    <version>0.3.0</version>
     <packaging>jar</packaging>
 
     <name>Bnd Vendor Plugin</name>
@@ -37,7 +37,7 @@
         <url>https://github.com/adamcin/${project.artifactId}</url>
         <developerConnection>scm:git:git@github.com:adamcin/${project.artifactId}.git</developerConnection>
         <connection>scm:git://github.com/adamcin/${project.artifactId}.git</connection>
-        <tag>HEAD</tag>
+        <tag>v0.3.0</tag>
     </scm>
 
     <distributionManagement>
